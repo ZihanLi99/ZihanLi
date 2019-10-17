@@ -7,16 +7,16 @@ val = 0
 min = 0
 max = 0
 
-print('How many integers would you like to enter?')
+print("How many integers would you like to enter?")
 size = int(input())
-print('Please enter ', size, ' integers.')
+print("Please enter ", size, " integers.")
 number = int(input())
 
 min = number
 max = number
 
 while val < size - 1:
-    number = int(input(''))
+    number = int(input(""))
     if number < min:
         min = number
 
@@ -25,5 +25,5 @@ while val < size - 1:
 
     val = val + 1
 
-print('min:', min)
-print('max:', max)
+print("min:", min)
+print("max:", max)
