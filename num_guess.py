@@ -14,7 +14,7 @@ while (guess == False):
 
     if (guess_num ==num):
         guess = True
-        print("You guessed it in", guess_try, "tries")
+        print("You guessed it in", guess_try, "tries.")
 
     elif guess_num > num:
         print("Too high - try again:")
