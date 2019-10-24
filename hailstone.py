@@ -6,12 +6,11 @@
 
 def hailstone():
     num = input()
-    step = 1;
+    step = 0
     while(num != 1):
         if num % 2 == 0:
-            return num // 2
+            num = num // 2
         elif num % 2 == 1:
-            return 3 * num + 1
-
-        step = step + 1
+            num = 3 * num + 1
+    step = step + 1
     print(step)
