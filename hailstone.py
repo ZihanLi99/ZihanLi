@@ -13,3 +13,5 @@ def hailstone():
             num = 3 * num + 1
         step = step + 1
     print(step)
+
+hailstone()
