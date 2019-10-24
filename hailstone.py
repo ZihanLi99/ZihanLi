@@ -11,9 +11,9 @@ def hailstone(num):
         return 3 * num + 1
 
 #num = hailstone(int(input("Enter a number：")))
-#step = 1
+step = 1
 
-#while (num != 1):
-#    num = hailstone(num)
-#    step = step + 1
+while (num != 1):
+    num = hailstone(num)
+    step = step + 1
 #print(step)
