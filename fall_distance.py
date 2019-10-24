@@ -6,6 +6,9 @@ def fall_distance(t):
     d = (1/2) * 9.8 * t ** 2
     return d
 
-print("Enter t:")
-t = float(input())
-print(fall_distance(t))
+def main():
+    print("Enter t:")
+    t = float(input())
+    print(fall_distance(t))
+
+main()
