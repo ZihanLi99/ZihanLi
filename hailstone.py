@@ -3,7 +3,7 @@
 # Description: takes a positive integer parameter as the initial number of a hailstone sequence and returns how many steps it takes to reach 1
 
 
-def hailstone(num):
+def hailstone():
     num = int(input())
     step = 0
     while (num != 1):
@@ -13,3 +13,5 @@ def hailstone(num):
             num = 3 * num + 1
         step = step + 1
     print(step)
+
+hailstone()
