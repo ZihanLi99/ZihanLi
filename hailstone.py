@@ -10,7 +10,7 @@ def hailstone(num):
     elif num % 2 == 1:
         return 3 * num + 1
 
-#num = hailstone(int(input("Enter a number：")))
+num = hailstone(int(input("Enter a number：")))
 step = 1
 
 while (num != 1):
