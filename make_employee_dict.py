@@ -5,21 +5,21 @@
 
 
 class Employee:
-    def __init__(self, name, ID_number, salary, email):
+    def __init__(self, name, ID_number, salary, email_address):
         self.name = name
         self.ID_number = ID_number
         self.salary = salary
-        self.email = email
+        self.email_address = email_address
 
 
-def make_employee_dict(names, ID_numbers, salaries, emails):
+def make_employee_dict(names, ID_numbers, salaries, email_addresses):
     employees = {}
     for i in range(len(names)):
         name = names[i]
         ID_number = ID_numbers[i]
         salary = salaries[i]
-        email = emails[i]
+        email_address = email_addresses[i]
 
-        emp = Employee(name, ID_number, salary, email)
+        emp = Employee(name, ID_number, salary, email_address)
         employees[ID_number] = emp
     return employees
