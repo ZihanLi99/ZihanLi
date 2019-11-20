@@ -5,10 +5,10 @@
 
 
 def count_letters(string):
-    cl_dic = {}
-    for le in string.upper():
-        if le in cl_dic:
-            cl_dic[le] += 1
+    cletter_dic = {}
+    for l in string.upper():
+        if l in cletter_dic:
+            cletter_dic[l] += 1
         else:
-            cl_dic[le] = 1
-    return cl_dic
+            cletter_dic[l] = 1
+    return cletter_dic
