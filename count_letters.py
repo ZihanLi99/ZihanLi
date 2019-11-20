@@ -5,11 +5,11 @@
 
 
 def count_letters(string):
-    letter_dic = {}
+    letters_dic = {}
     for l in string.upper():
         if l.isalpha():
-            if l in letter_dic:
-                letter_dic[l] += 1
+            if l in letters_dic:
+                letters_dic[l] += 1
             else:
-                letter_dic[l] = 1
-    return letter_dic
+                letters_dic[l] = 1
+    return letters_dic
