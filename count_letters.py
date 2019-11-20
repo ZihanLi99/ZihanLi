@@ -7,8 +7,9 @@
 def count_letters(string):
     letter_dic = {}
     for l in string.upper():
-        if l in letter_dic:
-            letter_dic[l] += 1
-        else:
-            letter_dic[l] = 1
+        if l.isalpha():
+            if l in letter_dic:
+                letter_dic[l] += 1
+            else:
+                letter_dic[l] = 1
     return letter_dic
