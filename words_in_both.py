@@ -4,11 +4,16 @@
 #               set of the words contained in both strings
 
 
-def words_in_both(wib1, wib2):
-    word1 = wib1.lower().split(" ")
-    word2 = wib2.lower().split(" ")
-    same_w = []
-    for w in word1:
-        if (w in word2) and (w not in same_w):
-            same_w.append(w)
-    return same_w
+def words_in_both(str1, str2):
+    parts1 = str1.split()
+    parts2 = str2.split()
+    words = set()
+    for part in parts1:
+        words.add(part.lower())
+
+    result = set()
+    for part in parts2:
+        part = part.lower()
+        if part in words:
+            result.add(part)
+    return result
