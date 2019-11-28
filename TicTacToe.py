@@ -3,6 +3,7 @@ class TicTacToe:
         super().__init__()
         self.board = None
         self.current_state = None
+        self.init()
 
     def init(self):
         self.board = [
