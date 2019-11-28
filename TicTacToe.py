@@ -1,5 +1,5 @@
 class TicTacToe:
-    def __init__(self):
+    def __init__(self) -> None:
         self._board = None
         self._current_state = None
 
