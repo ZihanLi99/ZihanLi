@@ -4,7 +4,7 @@
 #               row 7 and player o is trying to make it so player x doesn't have any legal moves. 
 
 class FBoard:
-    def __init__(self) -> None:
+    def __init__(self):
         self.data = []
         self.game_state = 'UNFINISHED'
         self.xpos = (0, 3)
