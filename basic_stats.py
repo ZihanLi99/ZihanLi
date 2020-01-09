@@ -22,15 +22,15 @@ def basic_stats(person_list):
     Returns a tuple containing the mean, median, and mode of these ages.
     """
 
-    age = []  # create list to store ages
+    age = []  # create list to store ages from person_li
 
-    for pl in person_list:  # a for loop for getting ages from each person
-        age.append(pl.age)
+    for p_l in person_list:  # a for loop for getting age from each person
+        age.append(p_l.age)
 
-    age_mean = statistics.mean(age)  # get mean of ages
+    mean_age = statistics.mean(age)  # get mean of ages
 
-    age_median = statistics.median(age)  # get median of ages
+    median_age = statistics.median(age)  # get median of ages
 
-    age_mode = statistics.mode(age)  # get mode of ages
+    mode_age = statistics.mode(age)  # get mode of ages
 
-    return age_mean, age_median, age_mode  # returns mean, median, mode
+    return mean_age, median_age, mode_age  # returns mean, median, mode
