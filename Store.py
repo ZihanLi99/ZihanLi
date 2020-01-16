@@ -126,7 +126,6 @@ class Store:
                     else:
                         print('product out of stock')
 
-
     def check_out_member(self, m_id):
          totalcost = 0.00
 
@@ -145,17 +144,31 @@ class Store:
                  return (totalcost + (totalcost * 0.07))
 
 
-#Test method
-def main():
-    try:
-        p1 = Product("889", "Rodent of unusual size", "when a rodent of the usual size just won't do", 33.45, 8)
-        c1 = Customer("Yinsheng", "QWF", False)
-        myStore = Store()
-        myStore.add_product(p1)
-        myStore.add_member(c1)
-        myStore.add_product_to_member_cart("889", "QWF")
-        result = myStore.check_out_member("QWF")
-        print('Total = $%.2f'%result)
-    except InvalidCheckoutError:
-        print("return the charge for the member's cart")
-main()
+### mainfunction
+#def main():
+#    try:
+#        p1 = Product("889", "Rodent of unusual size", "when a rodent of the usual size just won't do", 33.45, 8)
+#        c1 = Customer("Yinsheng", "QWF", False)
+#        myStore = Store()
+#        myStore.add_product(p1)
+#        myStore.add_member(c1)
+#        myStore.add_product_to_member_cart("889", "QWF")
+#       result = myStore.check_out_member("QWF")
+#        print("Total = $" result)
+#    except InvalidCheckoutError:
+#        print("return the charge for the member's cart")
+#main()
+
+### StoreTester.py
+# import unittest
+# import Store
+# class Storetest(unittest.TestCase):
+#    def Store_test(self):
+#        P = Store.Product(11, "Phone", "Smart phone", 450.00, 10)
+#
+#        self.assertEqual(P.get_title(), "Phone")
+#        self.assertEqual(P.get_description(), "Smart phone")
+#        self.assertEqual(P.get_price(), 450.00)
+#
+#        self.assertNotEqual(P.get_quantity(), 3)
+#        self.assertIsNotNone(P)
