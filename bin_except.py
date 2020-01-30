@@ -1,24 +1,21 @@
-class TargetNotFoundException(Exception):
+# Author: Zihan Li
+# Date: 2020/1/29
+# Description: a Box class whose init method takes three parameters and uses them to
+#              initialize the length, width and height of a Box
+
+from math import floor
+class TargetNotFound(Exception):
     pass
-def bin_except(arr,target):
-    low = 0
-    high = len(arr)-1
-    found = False
-    index=-1
-    while( low<=high and not found):
-        mid = (low + high)//2 # integer division by 2
-        if arr[mid] == target: # target is equal than arr[mid]
-            found=True
-            index=mid
+
+def bin_except(arr, tar_val):
+    min = 0
+    max = len(min) - 1
+    while min <= max:
+        mid = floor((min + max) / 2)
+        if arr[mid] == tar_val:
+            return mid
+        if arr[mid] > tar_val:
+            max = mid - 1
         else:
-            if target < arr[mid]: # target is less than arr[mid]
-                high = mid - 1
-            else: # target is greater than arr[mid]
-                low = mid + 1
-    try:
-        if not found:
-            raise TargetNotFoundException
-        else:
-            print("Target is Found at index: ",index)
-    except TargetNotFoundException:
-        print("Target Is Not Found in array ")
+            min = mid + 1
+    raise TargetNotFound("Can't find the number.")
