@@ -11,6 +11,7 @@ class Box:
         # the width of box
         self.height = height
         # the height of box
+        self.volume = self.Volume()
     def Volume(self):
         return self.length * self.width * self.height
         # the function of box's volume
