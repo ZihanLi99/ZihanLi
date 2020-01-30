@@ -11,7 +11,7 @@ class Box:
         # the width of box
         self.height = height
         # the height of box
-    def getVolume(self):
+    def Volume(self):
         return self.length * self.width * self.height
         # the function of box's volume
 
@@ -19,7 +19,7 @@ def box_sort(box_list):
     for b in range(1, len(box_list)):
         temp = box_list[b]
         B = b-1
-        while B >= 0 and temp.getVolume() > box_list[B].getVolume() :
+        while B >= 0 and temp.Volume() > box_list[B].Volume() :
             box_list[B+1] = box_list[B]
             B -= 1
         box_list[B+1] = temp
