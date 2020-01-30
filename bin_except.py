@@ -17,3 +17,19 @@ def binarySearch(arr, searchItem):
         else:
             beg = mid + 1
     raise TargetNotFound("TargetNotFound")
+
+arr = []
+print("Enter the numbers -1 to stop")
+while(True):
+    num = int(input(""))
+    if num == -1:
+        break
+    arr.append(num)
+arr.sort()
+print("After sorting your list is : ", arr)
+searchItem = int(input("Enter the number to search:"))
+try:
+    ind = binarySearch(arr, searchItem)
+    print("Your number is found in the list at the index {}".format(ind))
+except TargetNotFound as error:
+    print(error.val)
