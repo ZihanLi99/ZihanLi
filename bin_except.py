@@ -1,25 +1,19 @@
-class TargetNotFoundException(Exception):
-    pass
+class TargetNotFound(Exception):
+    def __init__(self, val):
+        self.val = val
+    def __str__(self):
+        return(repr(self.val))
 
-def bin_except(arr,target):
-    low = 0
-    high = len(arr)-1
-    found = False
-    index =- 1
-    while( low<=high and not found):
-        mid = (low + high)//2 
-        if arr[mid] == target: 
-            found=True
-            index=mid
+def binarySearch(arr, searchItem):
+    size = len(arr)
+    beg = 0
+    end = size - 1
+    while(beg < end):
+        mid = (beg + end) // 2
+        if arr[mid] == searchItem:
+            return mid
+        elif arr[mid] > searchItem:
+            end = mid - 1
         else:
-            if target < arr[mid]: 
-                high = mid - 1
-            else: 
-                low = mid + 1
-    try:
-        if not found:
-            raise TargetNotFoundException
-        else:
-            print("Target is Found at index: ",index)
-    except TargetNotFoundException:
-         print("Target Is Not Found in array ")
+            beg = mid + 1
+    raise TargetNotFound("TargetNotFound")
