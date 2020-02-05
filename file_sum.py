@@ -5,7 +5,7 @@
 
 def file_sum(file_name):
     sum = 0
-    # instalize sum
+    # initialize sum
     with open(file_name, 'r') as infile:
     # open a file you want
         for num in infile:
