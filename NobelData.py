@@ -18,7 +18,7 @@ class NobelData:
         # initialize winner
         for i in range(0, p):
             if (self.data['prizes'][i]['year'] == year and self.data['prizes'][i]['category'] == category):
-                winner = self.data['prizes'][i]['winners']
+                winner = self.data['prizes'][i]['laureate']
                 # use loop to search the year and category
                 break
 
