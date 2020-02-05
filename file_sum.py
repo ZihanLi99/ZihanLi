@@ -9,9 +9,8 @@ def file_sum(file_name):
     with open(file_name, 'r') as infile:
     # open a file you want
         for num in infile:
-            sum = sum + str(num)
+            sum = sum + float(num)
     # use loop to calculate sum of these number
     with open('sum.txt', 'w') as outfile:
         outfile.write("Sum = " + str(sum))
     # create a new file to show the sum
-
