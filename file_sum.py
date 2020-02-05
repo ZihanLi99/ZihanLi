@@ -12,5 +12,5 @@ def file_sum(file_name):
             sum = sum + num
     # use loop to calculate sum of these number
     with open('sum.txt', 'w') as outfile:
-        outfile.write("Sum = ", str(sum))
+        outfile.write("Sum = " + str(sum))
     # create a new file to show the sum
