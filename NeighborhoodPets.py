@@ -13,18 +13,18 @@ class NeighborhoodPets:
         # declare a dict to store all pet species
 
     def add_pet(self, pet_name, species, owner_name):
-        if pet_name not in self.Allpet.key():
+        if pet_name not in self.Allpet:
         # if a pet does not have the same name as a pet that has already been added
             self.Allpet[pet_name] = {"pet's name:": pet_name, "pet's species:": species, "pet's owner:": owner_name}
 
     def delete_pet(self, pet_name):
-        if pet_name in self.Allpet.key():
+        if pet_name in self.Allpet:
         # check a pet's name
             self.Allpet.pop(pet_name)
             # removed the pet's name
 
     def get_owner(self, pet_name):
-        if pet_name in self.Allpet.key():
+        if pet_name in self.Allpet:
         # check a pet's name
             return self.Allpet[pet_name]["pet's owner"]
 
