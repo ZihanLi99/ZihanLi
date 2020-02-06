@@ -15,7 +15,7 @@ class NeighborhoodPets:
     def add_pet(self, pet_name, species, owner_name):
         if pet_name not in self.Allpet:
         # if a pet does not have the same name as a pet that has already been added
-            self.Allpet[pet_name] = {"pet's name": pet_name, "pet's species": species, "owner": owner_name}
+            self.Allpet[pet_name] = {"name": pet_name, "species": species, "owner": owner_name}
 
     def delete_pet(self, pet_name):
         if pet_name in self.Allpet:
@@ -40,7 +40,7 @@ class NeighborhoodPets:
             # read and loads that file
 
     def get_all_species(self):
-        Allpet = {pet["pet's species"] for pet in self.Allpet.values()}
+        Allpet = {pet["species"] for pet in self.Allpet.values()}
         # find all species of pet and save in a set
         return Allpet
         # returns the set
