@@ -4,7 +4,7 @@
 #              It should return True if that string is a palindrome, but return False otherwise.
 
 def is_palindrome(word_str):
-    if len(word_str) == 1:
+    if len(word_str) < 2:
         # if there is only one letter, return True
         return True
     if word_str[0] != word_str[-1]:
