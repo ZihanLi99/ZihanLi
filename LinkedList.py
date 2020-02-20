@@ -77,7 +77,29 @@ class LinkedList:
         return self.contains_rec(self.head, val)
 
     def insert(self, idx, val):
-        pass
+        self.insert_rec(None, self.head, idx, val)
+
+    def insert_rec(self, prevnode, curnode, idx, val):
+        if prevnode is None:
+            if curnode is None:
+                self.head = Node(val)
+            else:
+                if idx == 0:
+                    self.head = Node(val)
+                    self.head.next = curnode
+                else:
+                    self.insert_rec(curnode, curnode.next, idx-1, val)
+        else:
+            if idx == 0:
+                newnode = Node(val)
+                prevnode.next = newnode
+                newnode.next = curnode
+            else:
+                if curnode is None:
+                    newnode = Node(val)
+                    prevnode.next = newnode
+                else:
+                    self.insert_rec(curnode, curnode.next, idx-1, val)
 
     def reverse_rec(self, node):
         if node is None:
