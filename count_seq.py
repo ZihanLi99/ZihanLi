@@ -26,4 +26,4 @@ def count_seq():
             newseq += '{}{}'.format(length, cur[start])
         cur = newseq
         # update new sequence
-        yield cur
+        yield int(cur)
