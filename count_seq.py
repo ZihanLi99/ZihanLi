@@ -6,7 +6,7 @@
 def count_seq():
     cur = '2'
     # set first digit
-    yield cur
+    yield int(cur)
     # yield first digit
     while True:
         newseq = ''
