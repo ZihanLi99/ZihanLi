@@ -4,6 +4,7 @@
 
 from typing import Tuple, List
 
+
 class PieceType:
     BING = 1
     SHUAI = 2
@@ -13,12 +14,14 @@ class PieceType:
     SHI = 6
     CHE = 7
 
+
 class Piece:
 
     def __init__(self, type, role) -> None:
         super().__init__()
         self.pieceType = type
         self.role = role
+
 
 class XiangqiGame:
     board: List[List[Piece]]
