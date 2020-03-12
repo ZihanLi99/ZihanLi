@@ -94,7 +94,9 @@ class XiangqiGame:
                     self.state = 'RED_WON'
             self.board[row_e][col_e] = self.board[row_s][col_s]
             self.board[row_s][col_s] = None
-        return True
+            return True
+        else:
+            return False
 
     def range_horizon_count(self, row, col1, col2):
         start = min(col1, col2)
@@ -200,4 +202,3 @@ class XiangqiGame:
         col = ord(pos[0]) - ord('a')
         row = int(pos[1:])
         return int(row) - 1, int(col) - 1
-
